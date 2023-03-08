@@ -4,7 +4,7 @@
 :root {
     --r-background-color: #fafcfe;
     --r-main-font: monospace;
-    --r-main-font-size: 42px;
+    --r-main-font-size: 32px;
     --r-main-color: #222;
     --r-block-margin: 0px;
     --r-heading-margin: 20px 0 20px 0;
@@ -16,9 +16,9 @@
     --r-heading-text-shadow: none;
     --r-heading-font-weight: 600;
     --r-heading1-text-shadow: none;
-    --r-heading1-size: 2.5em;
+    --r-heading1-size: 3em;
     --r-heading2-size: 1.3em;
-    --r-heading3-size: 1.2em;
+    --r-heading3-size: 1.1em;
     --r-heading4-size: 1em;
     --r-code-font: monospace;
     --r-link-color: #2a76dd;
@@ -40,9 +40,48 @@
     color: var(--r-main-color);
 }
 
+.reveal ol, .reveal dl, .reveal ul {
+    display: block;
+    text-align: left;
+    margin: 0.8em 0 1em 3em;
+}
+
+h1 {
+    color:#e3342f !important;
+}
+
+h2 {
+    color:#27ae60 !important;
+}
+
+h3 {
+    color:#2ecc71 !important;
+}
+
+
+
+
+p {
+    text-align:left;
+}
+
 li {
     margin-bottom:15px;
-    list-style-type: none;
+    list-style-type: circle;
+
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+}
+  
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #e74c3c; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 video {
